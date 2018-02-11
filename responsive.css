@@ -1,0 +1,385 @@
+/* CSS Document */
+
+/* Samsung and Android */
+@media screen and (max-width:375px) {
+div.footer {
+display:none;	
+}
+.customer-account-login input[type=email], .customer-account-login input[type=password], .customer-account-create input[type=email], .customer-account-create input[type=password], .customer-account-create input[type=text] {
+width:180px;
+}
+.account-login.form-box {
+width: 280px;
+float: left;
+position: absolute;
+margin-left: 50%;
+left: -140px;
+padding: 0px;
+margin-top: 40px;
+}
+.customer-account-create .account-login.form-box {
+margin-top:20px;	
+}
+#footer .col-md-4 {
+width: 100%;
+}
+#footer {
+height: 40px;
+margin: 0 auto;
+width: 100%;	
+}
+.form-box button.button span span {
+margin: 0 auto;
+float: left;
+width: 210px;
+text-align: center;
+}
+.form-box .header {
+padding: 0px;
+font-size: 20px;	
+}
+.col-2.registered-users.col2-set-bottom {
+line-height:10px;	
+}
+.content p {
+font-size: 15px;
+text-align: center;
+padding-bottom: 5px;
+}
+button.button {
+margin-top:5px;	
+}
+.account-login .content {
+margin-top:10px;	
+}
+.btn-red {
+padding:5px;
+width:180px;	
+}
+.customer-account-create button.button {
+margin: 0px auto;
+float: left;
+padding: 0px;
+width: 240px;
+display: block;
+clear: both;
+text-align: center;
+margin-left: 150px;
+left: -50%;
+position: relative;
+margin-bottom: 10px;
+}
+.customer-account-create .form-box button.button span span {
+margin: 0 auto;
+float: left;
+width: 240px;
+text-align: center;
+}
+.customer-account-create .buttons-set .back-link {
+padding: 0px;
+margin: 10px 10px 5px;
+font-size: 20px;
+}
+.customer-account-create .buttons-set .back-link {
+display: block;
+float: left;
+clear: both;
+margin: 0px 10px;
+}
+.customer-account-create .account-login p.required {
+margin: 0px 10px;
+text-align: right;
+padding: 0px;
+line-height: 10px;
+}
+.customer-account-create .buttons-set .back-link {
+padding: 0px;
+margin: 0px 15px 5px;
+font-size: 15px;
+}
+ul.form-list h2 {
+display:none;	
+}
+.account-create div.header {
+margin-top:10px;	
+}
+div.fieldset {
+padding: 0px 15px;
+line-height: 12px;	
+}
+.account-create .buttons-set {
+border:none;	
+}
+.customer-account-create .buttons-set {
+border: none;
+margin: 0px !important;	
+}
+
+.customer-account-login .wrapper > .content, 
+.customer-account-create .wrapper > .content {
+width:300px;
+left:150px;
+}
+.customer-account-login .wrapper > .content {
+margin-top:-20px;	
+}
+.main {
+width: 350px;
+left: -175px;	
+}
+.left_menu_block li.parent_item div.left_sub_menu_div li.left_sub_menu_item a {
+width:120px;	
+}
+.cdr_table td.callerid_cell {
+width: 115px;
+}
+.cdr_table td.date_cell {
+width: 70px;
+}
+.cdr_table td.last_cell {
+border-radius: 0px 0px 6px 0px !important;
+width: 125px;
+}
+.cdr_table td.destination_cell {
+width: 125px;
+border-radius: 0px 6px 0px 0px;
+}
+.cdr_table .duration_cell {
+width: 70px;
+border-radius: 0px 0px 0px 6px;
+}
+.cdr_table td.rate_cell {
+width: 115px;
+}
+.cdr_table tr, .ani_table tr, accounts_table tr {
+display: block;
+float: left;
+width: 350px;
+}
+div.balance_info {
+float: left;
+line-height: 10px;
+text-align: center;
+width: 115px;
+clear: right;
+margin-bottom: 20px;
+}
+div.balance_digits {
+width: 350px;
+margin-left: -175px;
+}
+div.balance_container {
+position: relative;
+height: 170px;
+}
+.line_message {
+clear: left;	
+}
+.get_entries_button, .get_cdrs_button {
+float: right;
+margin: 0px 4px;
+}
+.calls_per_page_div {
+margin-left:18px;
+}
+.calls_per_page_div ul {
+z-index: 99;	
+}
+.calls_page_div {
+margin-left: 70px;
+z-index: 1;
+position: relative;
+}
+.calls_page_div ul {
+z-index:98;
+}
+.available_lines_div {
+margin-left: 50px;
+}
+.available_lines_div ul {
+z-index: 100;
+}
+div.col-sm-6.col-md-4.copy.text-center {
+margin-top: 0px;
+}
+div.col-sm-6.col-md-4.copy.text-center p {
+width: 260px;
+margin: 0 auto;
+}
+}
+
+/*
+* Ajustes del responsivo
+* con Fecha 26/05/2015
+* por Jose Manuel Rodriguez 
+* email jmrpadrino@gmail.com
+*/
+/*@media (max-width: 767px) {
+    .wrapper{
+        *width: 100% !important;
+    }
+    .form-box {
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 50px;
+    }
+    .customer-account-login input[type=email],
+    .customer-account-login input[type=password],
+    .customer-account-create input[type=email],
+    .customer-account-create input[type=password],
+    .customer-account-create input[type=text]{
+        width: 100% !important;
+    }
+}*/
+
+/* Old iPhone and Galaxy phones */
+@media only screen and (width:320px){
+    #footer{
+        width: 320px !important;
+    }
+}
+@media only screen and (min-width:320px) and (max-width: 480px),  {
+	body{
+        background-size:auto;
+        background-attachment: fixed;
+        background-position: top left;
+        overflow-x:hidden;
+    }
+    .wrapper{
+        width: 100% !important;
+    }
+    .customer-account-login .wrapper{
+        position: relative !important;
+    }
+    .customer-account-login .wrapper > .content, .customer-account-create .wrapper > .content{
+        width: 100% !important;
+        left: 0px !important;
+        margin-bottom: 150px;
+    }
+    .customer-account-login .main, .customer-account-create .main{
+        width: 100% !important;
+    }
+    .customer-account-logoutsuccess .col1-layout .col-main, .customer-account-login .col1-layout .col-main, .customer-account-create .col1-layout .col-main{
+        width: 100% !important;
+        left: 0px !important;
+        margin-top: 0px;
+    }
+    .form-box {
+        width: 100%;
+        margin-left:8px;
+        margin-bottom: 150px;
+    }
+    .account-login.form-box{
+        width: 90%;
+        float: left;
+        position: relative;
+        margin-left: 49%;
+    }
+    .customer-account-login input[type=email], .customer-account-login input[type=password], .customer-account-create input[type=email], .customer-account-create input[type=password], .customer-account-create input[type=text]{
+        width: 100% !important; 
+    }
+    .customer-account-login #symantec_seal{
+        width: 114px !important;
+        right: 140px !important;
+    }
+    .customer-account-create #symantec_seal{
+        width: 114px !important;
+        right: 0px !important;
+        left: 110px !important;
+    }
+	#symantec_seal td a {
+        padding: 0px;
+    }
+    #mcaffee_seal{
+        right: 0px;
+        left: 5px;
+    }
+    a#mcaffee_seal{
+        width: 100px;
+    }
+    #footer{
+        z-index: 1000;
+        height: 100px;
+        padding-top: 10px;
+    }
+    .customer-account-login #cot_tl_fixed{
+        width: 142px;
+    }
+	
+}
+
+
+
+
+/* iPhone 5 */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) {
+    body{
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: top left;
+        overflow-x:hidden;
+    }
+    .wrapper{
+        width: 100% !important;
+    }
+    .customer-account-login .wrapper > .content, .customer-account-create .wrapper > .content{
+        width: 100% !important;
+    }
+    .customer-account-login .main, .customer-account-create .main{
+        width: 100% !important;
+        left: 0px !important;
+    }
+    .customer-account-logoutsuccess .col1-layout .col-main, .customer-account-login .col1-layout .col-main, .customer-account-create .col1-layout .col-main{
+        width: 100% !important;
+        left: 0px !important;
+        margin-top: 0px;
+    }
+    .form-box {
+        width: 100%;
+        margin-left:8px; 
+    }
+    .customer-account-login input[type=email], .customer-account-login input[type=password], .customer-account-create input[type=email], .customer-account-create input[type=password], .customer-account-create input[type=text]{
+        width: 100% !important; 
+    }
+    
+}
+
+/* iPhone 6 */
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) { 
+    body{
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: top left !important;
+        overflow-x:hidden;
+    }
+    .wrapper{
+        width: 100% !important;
+    }
+    .customer-account-login .wrapper > .content, .customer-account-create .wrapper > .content{
+        width: 100% !important;
+    }
+    .customer-account-login .wrapper > .content{
+        left: 0px;
+    }
+    .customer-account-login .main, .customer-account-create .main{
+        width: 100% !important;
+        left: 0px !important;
+    }
+    .customer-account-logoutsuccess .col1-layout .col-main, .customer-account-login .col1-layout .col-main, .customer-account-create .col1-layout .col-main{
+        width: 100% !important;
+        left: 0px !important;
+        margin-top: 0px;
+    }
+    .form-box {
+        width: 100%;
+        margin-left:8px; 
+    }
+    .customer-account-login input[type=email], .customer-account-login input[type=password], .customer-account-create input[type=email], .customer-account-create input[type=password], .customer-account-create input[type=text]{
+        width: 100% !important; 
+    }
+}
+/*----- FIN AJUSTES -----*/

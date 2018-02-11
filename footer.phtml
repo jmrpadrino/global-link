@@ -1,0 +1,157 @@
+<?php
+/*
+$_social_config = Mage::getStoreConfig('milanoconfig/social');
+?>
+
+<div class="footer-container">
+    <div class="footer-menu-container">
+        <div class="f-left footer-left">
+            <div class="footer-menu"><?php echo $this->getChildHtml('footer_menu'); ?></div>
+            <div class="newsletter"><?php echo $this->getChildHtml('newsletter'); ?></div>
+        </div>
+        <div class="f-right">
+            <div class="footer-right">
+            </div>
+		</div>
+		<div class="clear"></div>
+
+	</div>
+</div>
+
+<div class="footer-last-container">
+    <div class="footer-last">
+        <div class="f-left">
+			<?php echo $this->getChildHtml('cms_footer_links'); ?>
+            <?php echo $this->getChildHtml('footer_links'); ?>
+        </div>
+        <div class="f-right">
+        	<?php echo $this->getCopyright(); ?>
+        </div>
+    </div>
+</div>
+<?php if(Mage::getStoreConfig('milanoconfig/generaloptions/topbtn') == 1): ?><div id="message"><a href="#top" id="top-link">&nbsp;</a></div><?php endif; ?>
+*/
+?>
+<script>
+jQuery(document).ready(function() {
+  jQuery("form.jqtransform").jqTransform();
+});
+jQuery(window).load(function(){
+	// console.log("Initializing options...");
+	prepare_jqtransform_select_menus();
+});
+function prepare_jqtransform_select_menus() {
+	jQuery('select').each(function(){
+		var selectedOptionIndex = jQuery(this)[0].selectedIndex;
+		//console.log('Selected Index: ' + selectedOptionIndex);
+		if( selectedOptionIndex >= 0 ) {
+			//console.log("Searching jQuery to select option...");
+			jQuery(this).parent(".jqTransformSelectWrapper").each(function(){
+				//console.log("Found jquery select, searching index: " + selectedOptionIndex);
+				jQuery(this).find("a[index='"+selectedOptionIndex+"']").each(function(){
+					jQuery(this).addClass('selected');
+					jQuery(this).trigger('click');
+				});
+			});
+		}else if( !selectedOptionIndex || typeof selectedOptionIndex === 'undefined' ) {
+			jQuery(this).parent(".jqTransformSelectWrapper").each(function(){
+				//console.log("Found jquery select, searching index 0...");
+				jQuery(this).find("a[index='0']").each(function(){
+					jQuery(this).addClass('selected');
+					jQuery(this).trigger('click');
+				});
+			});
+		}
+	});	
+}
+</script>
+
+<script>
+jQuery(document).ready(function(){
+//	jQuery('.product-options .input-box input.checkbox').trigger('click');
+//	jQuery('.product-options .input-box input.checkbox').trigger('click');
+	jQuery('.input-box .jqTransformCheckboxWrapper a.jqTransformCheckbox').click(function(){
+		console.log('Reloading price');
+		//jQuery('.product-options .input-box .jqTransformCheckbox').removeClass('jqTransformChecked');
+		opConfig.reloadPrice();
+		//jQuery('.product-options .input-box .jqTransformCheckbox').addClass('jqTransformChecked');
+	});
+	
+//	jQuery('.collapse').collapse()
+});
+
+
+jQuery(window).load(function(){
+});
+</script>
+
+
+<script type='text/javascript' src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js?ver=3.1.1'></script>
+<?php
+/*
+<script>
+function resizeSearch() {
+	var windowWidth = jQuery(window).width();
+	var buttonWidth = jQuery('#searchsubmit').width();
+	var logoWidth = jQuery('img.logo_image').width();
+	var blueWidth = jQuery('.block-blue').width();
+
+	var newWidth = windowWidth - 2 * buttonWidth - logoWidth - blueWidth - 50;
+	jQuery('.search-box').width(newWidth);
+	jQuery('.search-box').css('width', newWidth + ' !important');
+	console.log('Window width: ' + windowWidth );
+	console.log('Button width: ' + buttonWidth ); 
+	console.log('Logo width: ' + logoWidth ); 
+	console.log('Blue width: ' + blueWidth ); 
+	console.log('Bar width: ' + newWidth ); 
+}
+
+jQuery(document).ready(function(){
+	resizeSearch();
+});
+jQuery(window).resize(function() {
+    resizeSearch();
+});
+*/
+?>
+<?php
+/*
+<!-- McAfee Secure Trustmark for www.global-link.us -->
+<a id = "mcaffee_seal" target="_blank" href="https://www.mcafeesecure.com/verify?host=www.global-link.us">
+<img class="mfes-trustmark mfes-trustmark-hover" border="0" src="//cdn.ywxi.net/meter/www.global-link.us/2.gif" width="94" height="54" title="McAfee SECURE sites help keep you safe from identity theft, credit card fraud, spyware, spam, viruses and online scams" alt="McAfee SECURE sites help keep you safe from identity theft, credit card fraud, spyware, spam, viruses and online scams" oncontextmenu="alert('Copying Prohibited by Law - McAfee Secure is a Trademark of McAfee, Inc.'); return false;"></a>
+*/
+?>
+<?php 
+    // Codigo anterior 
+    // Responsable: Jose Manuel Rodriguez
+    // Email: jmrpadrino@gmail.com
+/*
+<table id="symantec_seal" width="100%" border="0" cellpadding="0" cellspacing="0" title="Click to Verify - This site chose Symantec SSL for secure e-commerce and confidential communications.">
+<tr>
+<td width="100%" align="center" valign="top"><script type="text/javascript" src="https://seal.websecurity.norton.com/getseal?host_name=www.global-link.us&amp;size=XS&amp;use_flash=NO&amp;use_transparent=NO&amp;lang=en"></script>
+<br />
+<a href="http://www.symantec.com/ssl-certificates" target="_blank"  style="color:#000000; text-decoration:none; font:bold 7px verdana,sans-serif; letter-spacing:.5px; text-align:center; margin:0px; padding:0px;">ABOUT SSL CERTIFICATES</a>
+</td>
+</tr>
+</table> */
+?>
+<?php 
+    // Codigo actual
+    // Responsable: Jose Manuel Rodriguez
+    // Email: jmrpadrino@gmail.com
+?>
+<div id="symantec_seal" title="Click to Verify - This site chose Symantec SSL for secure e-commerce and confidential communications."><script type="text/javascript" src="https://seal.websecurity.norton.com/getseal?host_name=www.global-link.us&amp;size=XS&amp;use_flash=NO&amp;use_transparent=NO&amp;lang=en"></script>
+<a href="http://www.symantec.com/ssl-certificates" target="_blank"  style="color:#000000; text-decoration:none; font:bold 7px verdana,sans-serif; letter-spacing:.5px; text-align:center; margin:0px; padding:0px;">ABOUT SSL CERTIFICATES</a>
+</div>
+
+<?php //FIN CODIGO ACTUAL ?>
+<!-- McAfee Secure Trustmark for www.global-link.us -->
+<a id = "mcaffee_seal" target="_blank" href="https://www.mcafeesecure.com/verify?host=www.global-link.us">
+	<img class="mfes-trustmark mfes-trustmark-hover" border="0" src="//cdn.ywxi.net/meter/www.global-link.us/2.gif" width="94" height="54" title="McAfee SECURE sites help keep you safe from identity theft, credit card fraud, spyware, spam, viruses and online scams" alt="McAfee SECURE sites help keep you safe from identity theft, credit card fraud, spyware, spam, viruses and online scams" oncontextmenu="alert('Copying Prohibited by Law - McAfee Secure is a Trademark of McAfee, Inc.'); return false;">
+</a>
+<!-- End McAfee Secure Trustmark -->
+
+<a href="http://www.instantssl.com" id="comodoTL">SSL</a>
+<script>
+  COT("https://www.global-link.us/custom/images/company/cot_evssl.gif", "SC3", "none");
+</script>

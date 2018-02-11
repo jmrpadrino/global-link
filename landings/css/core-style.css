@@ -1,0 +1,416 @@
+/* Global Link landings core styling */
+/*
+    Table of contents
+    0. Common
+    1. Header
+        1.1 Logo
+        1.2 Menu
+        1.3 Modal
+    3. Content
+    4. Footer
+    5. backgrounds
+    6. RESPONSIVE MEDIA QUIERIES
+        6.1 Mobile
+        6.2 Tablets
+*/
+/* 0. Common */
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px; 
+}
+.modal{
+    margin-top: 50px;
+}
+.extrabold{
+    font-weight: 700;
+}
+p.extrabold{
+    font-size: 36px;
+    font-weight: 700;
+}
+.orange{
+    color: #FFC04F;
+}
+.navbar-collapse{
+    background: white;
+}
+.navbar-toggle{
+    margin-top: 20px;
+}
+.navbar-toggle,.navbar-toggle.collapsed{
+    background: transparent;
+    border: none;
+    color: white;
+}
+.navbar-toggle:hover{
+    background: transparent;
+}
+.navbar-default .navbar-toggle .icon-bar{
+    background-color: #4E86B7;
+}
+.delay-one {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+}
+.delay-two {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+}
+.delay-three {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-delay: 1.5s;
+  -webkit-animation-delay: 1.5s;
+}
+.delay-four {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-delay: 2s;
+  -webkit-animation-delay: 2s;
+}
+/* 1. Header */
+/* 1.1 Logo */
+.navbar{
+    border-radius: 0px;
+    border: none;
+    height: 70px;
+    margin-bottom: 0px;
+    z-index: 9999;
+}
+.navbar-default{
+    background-image: none;
+    background-color: white;
+    box-shadow: none;
+    border: none;
+    border-radius: none;
+}
+.logo{
+    float: left;
+    width: 205px;
+    height: 58px;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+.nav{
+    margin-top: 10px;
+}
+/* 1.2 Menu */
+/* 1.3 Modal */
+.modal{
+    font-size: 14px;
+}
+.modal-header{
+    background: #1E3A50;
+    color: #fff;
+}
+.alerta{
+    color: red;
+    font-weight: 400;
+}
+#tabs li a{
+    font-size: 18px;
+}
+.close{
+    color: #fff;
+}
+.info{
+    border: solid 1px #E4EEF2;
+    border-radius: 5px;
+    background: #F7FAFB;
+    padding: 15px;
+}
+.modal select{
+    text-transform: capitalize !important;
+    border: solid 1px #ccc;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.balance{
+    width: 100%;
+    border-radius: 0;
+    height: 38px;
+}
+.country p{
+    text-transform: capitalize;
+}
+.tab-pane{
+    padding: 20px 0 20px;
+}
+.jumbotron {
+    padding: 0;
+    margin-bottom: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+.jumbotron .vertical-center{
+    margin-bottom: 0;
+}
+/* 3. Content */
+.main-content{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    height: 440px;
+    overflow: visible;
+    position: relative;
+}
+.accessnumber a{
+    color: white;
+    text-decoration: none;
+}
+.features{
+    margin-left: 30px;
+    margin-top: 40px;
+}
+.features h1{
+    margin-bottom: -5px;
+    font-weight: 100;
+}
+.conds{
+    list-style: none;
+    padding: 0px;
+    margin-left: 18px;
+    font-weight: 100;
+}
+hr.divisor{
+    margin-top: 0px;
+    margin-bottom: 13px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+.small-notice{
+    font-size: 12px;
+}
+.form-control::-webkit-input-placeholder { color: white; }
+.form-control:-moz-placeholder { color: white; }
+.form-control::-moz-placeholder { color: white; }
+.form-control:-ms-input-placeholder { color: white; }
+.number-input{
+    background: #2e3e51;
+    border: 1px solid #45638d;
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+    width: 345px !important;
+    padding: 10px;
+    margin-right: 10px;
+}
+.btn-startcalling{
+    background-color: #b62a2a;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    border-top: 1px solid white;
+    padding: 0px 17px;
+}
+.btn-startcalling:hover{
+    color: #fff;
+    border-top: 1px solid #ddd;
+    background-color: #801515;
+}
+.number-input,.btn-startcalling{
+    height: 46px;
+}
+.your-phone-notice{
+    margin-left: 30px;
+    margin-bottom: 5px;
+}
+.cart-notice{
+    text-align: center !important;
+    max-width: 460px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.mobile-pic{
+    margin-left: 15px;
+    position: absolute;
+    top: 120px;
+    left: 15px;
+    
+}
+/* 4. Footer */
+.payments ul li,.footer-menu li{
+    display: inline-block;
+    font-size: 16px;
+}
+.payments ul li{
+    margin-top: 30px;
+    margin-bottom: 75px; 
+}
+.footer-menu{
+    margin-bottom: 0px;
+}
+.footer-menu li{
+    margin-right: 20px;
+}
+.copyright{
+    font-size: 16px;
+    margin: 0px;
+    margin-left: 30px;
+}
+.mcafee,.norton{
+    float:left;
+    margin-right: 20px;
+}
+/* 5. backgrounds */
+.venezuela{
+    background-image: url(../images/bg_venezuela.jpg);
+}
+.colombia{
+    background-image: url(../images/bg_colombia.jpg);
+}
+.mexico{
+    background-image: url(../images/bg_mexico.jpg);
+}
+.argentina{
+    background-image: url(../images/bg_argentina.jpg);
+}
+/* 6. RESPONSIVE MEDIA QUIERIES */
+/* 6.1 Mobile */
+@media only screen 
+and (max-width : 319px) {
+    .logo{
+        width: 125px;
+        height: auto;
+    }
+    .logo img{
+        width: 100%;
+    }
+    .payments ul li{
+        margin-top: 20px;
+        margin-bottom: 30px;
+        width: 15%;
+    }
+    .payments ul li img{
+        width: 100%;
+    }
+}
+@media only screen 
+and (max-width : 568px) {
+    body{
+        background-color: white;
+    }
+    .features{
+        margin-left: 0px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .features h1{
+        font-size: 20px;
+    }
+    p.extrabold{
+        font-size: 20px;
+    }
+    .conds{
+        margin-left: 10px;
+        font-size: 13px;
+    }
+    .your-phone-notice {
+        margin-left: 10px;
+    }
+    .number-input{
+        font-size: 14px;
+    }
+    .btn-startcalling,.number-input{
+        display: block;
+        width: 95% !important;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+    .btn-startcalling{
+        letter-spacing: 2px;
+        font-weight: 100;
+    }
+    .your-phone-notice{
+          margin-left: 24px;
+          font-size: 10px;
+    }
+    .cart-notice{
+        max-width: 95%;
+        font-size: 10px
+    }
+    .payments ul{
+        padding: 0px;
+    }
+    .payments ul li{
+        margin-top: 20px;
+        margin-bottom: 30px;
+        width: 18%;
+    }
+    .payments ul li img{
+        width: 100%;
+    }
+    .footer-menu,.copyright{
+        text-align: center;
+    }
+    .copyright{
+        margin-bottom: 30px;
+    }
+}
+/* 6.2 Tablets */
+@media only screen 
+and (min-width : 569px) 
+and (max-width : 1024px) {
+    body{
+        background-color: white;
+    }
+    .features h1{
+        font-size: 30px;
+    }
+    p.extrabold{
+        font-size: 30px;
+    }
+    .conds{
+        margin-bottom: 5px;
+    }
+    .your-phone-notice {
+        margin-left: 24px;
+        font-size: 10px;
+    }
+    .number-input{
+        font-size: 14px;
+        width: 280px !important;
+    }
+    .btn-startcalling {
+        width: 130px;
+        font-size: 10px;
+    }
+    .small-notice{
+        font-size: 10px;
+        line-height: 12px;
+    }
+    .payments ul{
+        padding: 0px;
+    }
+    .payments ul li{
+        margin-top: 20px;
+        margin-bottom: 30px;
+        width: auto;
+    }
+    .payments ul li img{
+        width: 100%;
+    }
+    .footer-menu,.copyright{
+        text-align: center;
+    }
+    .copyright{
+        margin-bottom: 30px;
+    }
+}

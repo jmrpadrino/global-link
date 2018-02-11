@@ -1,0 +1,338 @@
+<?php //////////// START - HEADER TOP & MENU //////////// ?>
+<?php
+require_once dirname(__FILE__) . "/../custom-config/settings.php"; 					
+require_once dirname(__FILE__) . "/../custom-company/info.php"; 
+?>
+
+<?php
+if( Mage::getSingleton('customer/session')->isLoggedIn() == 1 ) {
+	$display_login = "display:none !important";
+	$display_account = "dispaly: block !important";
+} else {
+	$display_login = "display: block !important";
+	$display_account = "display: none !important";
+}
+?>
+<style>
+<!--
+ul.nav > li.sign_in_link,
+ul.nav > li.sign_up_link {
+<?php echo $display_login ?>
+}
+ul.nav > li.my_account_link,
+ul.nav > li.sign_out_link {
+<?php echo $display_account ?>
+}
+-->
+</style>
+<?php
+$request_uri;
+if( strpos( $_SERVER['REQUEST_URI'], "?" ) ) {
+	$request_uri = substr( $_SERVER['REQUEST_URI'], 0, strpos( $_SERVER['REQUEST_URI'], "?" ) );
+} else {
+	$request_uri = $_SERVER['REQUEST_URI'];	
+}
+$link_english = $request_uri . "?___store=english&___from_store=spanish";
+$link_spanish = $request_uri . "?___store=spanish&___from_store=english";
+?>
+<script>
+jQuery(document).ready(function(){
+	jQuery('a.language_link_spanish').attr('href','<?php echo $link_spanish ?>');
+	jQuery('a.language_link_english').attr('href','<?php echo $link_english ?>');
+	});
+</script>
+
+<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId("header")->toHtml(); ?>
+<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId("header_spanish")->toHtml(); ?>
+
+<div class="header_search_bar">
+<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId("rate_search_bar")->toHtml(); ?>
+<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId("rate_search_bar_spanish")->toHtml(); ?>
+</div>
+
+<?php
+/*
+<div class="top_header">
+    <div class="header_logo">
+        <a href="<?php 
+            echo $this->getUrl('') ?>" title="<?php 
+            echo $this->getLogoAlt() ?>" class="logo">
+            <img src="<?php 
+            echo Mage::registry('themeMediaUrl').Mage::getStoreConfig('milanoconfig/generaloptions/logo'); ?>" alt="<?php 
+            echo $this->getLogoAlt() ?>" />
+		</a>
+    </div>
+    <div class="main_menu_container">
+        <div class="top_menu_right">
+			<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId("top_right_block")->toHtml(); ?>
+        </div>
+    	<div class="top_menu_left">
+        	<div class="main_menu_block">
+		        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId("main_menu_block")->toHtml(); ?>
+    		</div>
+        </div>
+    </div>
+</div>
+<?php //////////// END - HEADER TOP & MENU //////////// ?>
+<div class="header-container">
+	<?php //////////// START - HEADER UPPER SECTION //////////// ?>
+	<div class="header-small-container">
+        <div class="header">
+            <div class="header-left">
+                <?php echo $this->getChildHtml('store_switcher') ?>
+                <?php echo $this->getChildHtml('store_language') ?>
+				<?php echo $this->getChildHtml('currency') ?>
+                <div class="cms-header-links"><?php echo $this->getChildHtml('cms_header_links') ?></div>
+            </div>
+            <div class="header-right">
+                <span class="welcome-msg"><?php echo $this->getWelcome() ?></span>
+			</div>      
+        </div>
+    </div>
+	<?php //////////// END - HEADER UPPER SECTION //////////// ?>
+
+
+    
+	<?php //////////// STAR - HEADER LOWER SECTION //////////// ?>
+    <div class="header-main-container">
+    	<div class="header">
+
+            <div class="header-left header-menu">
+				<?php echo $this->getChildHtml('header_menu') ?>
+            </div>
+            <div class="header-right">
+            	<?php echo $this->getChildHtml('top_cart') ?>
+                <?php echo $this->getChildHtml('topLinks') ?>
+                <?php echo $this->getChildHtml('topSearch') ?>   
+            </div>      
+        </div>
+    </div>
+	<?php //////////// END HEADER LOWER SECTION //////////// ?>
+    
+
+    <?php //echo $this->getChildHtml('topMenu'); ?>
+    <div class="header-promo-container">
+    	<div class="header">
+			<?php echo $this->getChildHtml('header_promo') ?>
+        </div>
+    </div>
+    <?php echo $this->getChildHtml('topBread'); ?>
+    <?php echo $this->getChildHtml('topContainer'); ?>
+</div>
+*/
+?>
+<?php
+/*
+<script type="text/javascript">
+jQuery(document).ready(function() {
+	 // Simple image gallery. Uses default settings
+
+	jQuery('.fancybox').fancybox();
+
+	 // Different effects
+
+	// Change title type, overlay closing speed
+	jQuery(".fancybox-effects-a").fancybox({
+		helpers: {
+			title : {
+				type : 'outside'
+			},
+			overlay : {
+				speedOut : 0
+			}
+		}
+	});
+
+	// Disable opening and closing animations, change title type
+	jQuery(".fancybox-effects-b").fancybox({
+		openEffect  : 'none',
+		closeEffect	: 'none',
+
+		helpers : {
+			title : {
+				type : 'over'
+			}
+		}
+	});
+
+	// Set custom style, close if clicked, change title type and overlay color
+	jQuery(".fancybox-effects-c").fancybox({
+		wrapCSS    : 'fancybox-custom',
+		closeClick : true,
+
+		openEffect : 'none',
+
+		helpers : {
+			title : {
+				type : 'inside'
+			},
+			overlay : {
+				css : {
+					'background' : 'rgba(238,238,238,0.85)'
+				}
+			}
+		}
+	});
+
+	// Remove padding, set opening and closing animations, close if clicked and disable overlay
+	jQuery(".fancybox-effects-d").fancybox({
+		padding: 0,
+
+		openEffect : 'elastic',
+		openSpeed  : 150,
+
+		closeEffect : 'elastic',
+		closeSpeed  : 150,
+
+		closeClick : true,
+
+		helpers : {
+			overlay : null
+		}
+	});
+
+	 // Button helper. Disable animations, hide close button, change title type and content
+
+	jQuery('.fancybox-buttons').fancybox({
+		openEffect  : 'none',
+		closeEffect : 'none',
+
+		prevEffect : 'none',
+		nextEffect : 'none',
+
+		closeBtn  : false,
+
+		helpers : {
+			title : {
+				type : 'inside'
+			},
+			buttons	: {}
+		},
+
+		afterLoad : function() {
+			this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+		}
+	});
+
+
+	
+	 //  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+	 
+
+	jQuery('.fancybox-thumbs').fancybox({
+		prevEffect : 'none',
+		nextEffect : 'none',
+
+		closeBtn  : false,
+		arrows    : false,
+		nextClick : true,
+
+		helpers : {
+			thumbs : {
+				width  : 50,
+				height : 50
+			}
+		}
+	});
+
+	
+	 //  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+	
+	jQuery('.fancybox-media')
+		.attr('rel', 'media-gallery')
+		.fancybox({
+			openEffect : 'none',
+			closeEffect : 'none',
+			prevEffect : 'none',
+			nextEffect : 'none',
+
+			arrows : false,
+			helpers : {
+				media : {},
+				buttons : {}
+			}
+		});
+
+
+	 //  Open manually
+
+
+	jQuery("#fancybox-manual-a").click(function() {
+		jQuery(this).fancybox.open('1_b.jpg');
+	});
+
+	jQuery("#fancybox-manual-b").click(function() {
+		jQuery(this).fancybox.open({
+			href : 'iframe.html',
+			type : 'iframe',
+			padding : 5
+		});
+	});
+
+	jQuery("#fancybox-manual-c").click(function() {
+		jQuery(this).fancybox.open([
+			{
+				href : '1_b.jpg',
+				title : 'My title'
+			}, {
+				href : '2_b.jpg',
+				title : '2nd title'
+			}, {
+				href : '3_b.jpg'
+			}
+		], {
+			helpers : {
+				thumbs : {
+					width: 75,
+					height: 50
+				}
+			}
+		});
+	});
+	jQuery('.dropdown-menu.ddm').hover(
+		function(){
+			jQuery(this).parent('li.dropdown').css('background-color','#E7E7E7 !important');
+			console.log('Setting menu link color');
+		},function(){
+			jQuery(this).parent('li.dropdown a').css('background-color','#FFF !important');
+			jQuery(this).parent('li.dropdown').css('background-color','#FFF !important');
+			console.log('Resetting menu link color');			
+		});
+});
+</script>
+*/
+?>
+<!--
+<script type="text/javascript">
+  (function() {
+    var sa = document.createElement('script'); sa.type = 'text/javascript'; sa.async = true;
+    sa.src = ('https:' == document.location.protocol ? 'https://cdn' : 'http://cdn') + '.ywxi.net/js/1.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sa, s);
+  })();
+</script>
+-->
+<style type="text/css">
+.fancybox-custom .fancybox-skin {
+	box-shadow: 0 0 50px #222;
+}
+</style>
+
+
+
+<style>
+/* Hidden elements in beta version */
+
+/*.sticky-wrapper.header-top,*/
+.header_search_bar,
+.container.home-blog-container,
+.container.hidden-xs,
+.cms-home .fullwidthbanner-container,
+.cms-home .containers_wrapper,
+.block-reorder {
+	display:none !important;
+}
+.customer-account-login .sticky-wrapper.header-top,
+.customer-account-create .sticky-wrapper.header-top {
+	display:none !important;
+}
+</style>
